@@ -1,0 +1,211 @@
+{
+  "language": "en",
+  "patterns": {
+    "light": {
+      "profanity": [
+        {
+          "pattern": "\\bf+u+c+k+i+n+g+\\b",
+          "replacement": "fudging",
+          "flags": "i"
+        },
+        { "pattern": "\\bf+u+c+k+\\b", "replacement": "fudge", "flags": "i" },
+        { "pattern": "\\bs+h+i+t+\\b", "replacement": "shoot", "flags": "i" },
+        { "pattern": "\\bdamn+i+t+\\b", "replacement": "darnit", "flags": "i" },
+        { "pattern": "\\bdamn+\\b", "replacement": "dang", "flags": "i" },
+        { "pattern": "\\bass+hole+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bass\\b", "replacement": "butt", "flags": "i" },
+        { "pattern": "\\bbitch+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bcrap+\\b", "replacement": "crud", "flags": "i" },
+        { "pattern": "\\bhell\\b", "replacement": "heck", "flags": "i" },
+        { "pattern": "\\bbastard+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bdick\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bpissed\\b", "replacement": "ticked", "flags": "i" },
+        { "pattern": "\\bpiss\\b", "replacement": "ticked", "flags": "i" }
+      ]
+    },
+    "moderate": {
+      "profanity": [
+        {
+          "pattern": "\\bf+u+c+k+i+n+g+\\b",
+          "replacement": "fudging",
+          "flags": "i"
+        },
+        { "pattern": "\\bf+u+c+k+\\b", "replacement": "fudge", "flags": "i" },
+        { "pattern": "\\bs+h+i+t+\\b", "replacement": "shoot", "flags": "i" },
+        { "pattern": "\\bdamn+i+t+\\b", "replacement": "darnit", "flags": "i" },
+        { "pattern": "\\bdamn+\\b", "replacement": "dang", "flags": "i" },
+        { "pattern": "\\bass+hole+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bass\\b", "replacement": "butt", "flags": "i" },
+        { "pattern": "\\bbitch+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bcrap+\\b", "replacement": "crud", "flags": "i" },
+        { "pattern": "\\bhell\\b", "replacement": "heck", "flags": "i" },
+        { "pattern": "\\bbastard+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bdick\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bpissed\\b", "replacement": "ticked", "flags": "i" },
+        { "pattern": "\\bpiss\\b", "replacement": "ticked", "flags": "i" }
+      ],
+      "hostile_phrases": [
+        { "pattern": "\\bwho the hell\\b", "replacement": "who", "flags": "i" },
+        {
+          "pattern": "\\bwhat the f\\w+",
+          "replacement": "what on earth",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bshut up\\b",
+          "replacement": "please stop",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bare you stupid\\b",
+          "replacement": "could you reconsider",
+          "flags": "i"
+        },
+        { "pattern": "\\byou idiot\\b", "replacement": "friend", "flags": "i" },
+        {
+          "pattern": "\\bI don't give a\\b",
+          "replacement": "I'm not concerned about",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bpiss off\\b",
+          "replacement": "please leave",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bgo to hell\\b",
+          "replacement": "go away",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bscrew you\\b",
+          "replacement": "I disagree with you",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bkiss my\\b",
+          "replacement": "I respectfully decline",
+          "flags": "i"
+        }
+      ]
+    },
+    "strict": {
+      "profanity": [
+        {
+          "pattern": "\\bf+u+c+k+i+n+g+\\b",
+          "replacement": "fudging",
+          "flags": "i"
+        },
+        { "pattern": "\\bf+u+c+k+\\b", "replacement": "fudge", "flags": "i" },
+        { "pattern": "\\bs+h+i+t+\\b", "replacement": "shoot", "flags": "i" },
+        { "pattern": "\\bdamn+i+t+\\b", "replacement": "darnit", "flags": "i" },
+        { "pattern": "\\bdamn+\\b", "replacement": "dang", "flags": "i" },
+        { "pattern": "\\bass+hole+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bass\\b", "replacement": "butt", "flags": "i" },
+        { "pattern": "\\bbitch+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bcrap+\\b", "replacement": "crud", "flags": "i" },
+        { "pattern": "\\bhell\\b", "replacement": "heck", "flags": "i" },
+        { "pattern": "\\bbastard+\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bdick\\b", "replacement": "jerk", "flags": "i" },
+        { "pattern": "\\bpissed\\b", "replacement": "ticked", "flags": "i" },
+        { "pattern": "\\bpiss\\b", "replacement": "ticked", "flags": "i" }
+      ],
+      "hostile_phrases": [
+        { "pattern": "\\bwho the hell\\b", "replacement": "who", "flags": "i" },
+        {
+          "pattern": "\\bwhat the f\\w+",
+          "replacement": "what on earth",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bshut up\\b",
+          "replacement": "please stop",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bare you stupid\\b",
+          "replacement": "could you reconsider",
+          "flags": "i"
+        },
+        { "pattern": "\\byou idiot\\b", "replacement": "friend", "flags": "i" },
+        {
+          "pattern": "\\bI don't give a\\b",
+          "replacement": "I'm not concerned about",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bpiss off\\b",
+          "replacement": "please leave",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bgo to hell\\b",
+          "replacement": "go away",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bscrew you\\b",
+          "replacement": "I disagree with you",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bkiss my\\b",
+          "replacement": "I respectfully decline",
+          "flags": "i"
+        }
+      ],
+      "negativity": [
+        {
+          "pattern": "\\bthis is garbage\\b",
+          "replacement": "this needs improvement",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bterrible\\b",
+          "replacement": "suboptimal",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bthis sucks\\b",
+          "replacement": "this needs work",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bhate this\\b",
+          "replacement": "dislike this",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bworst\\b",
+          "replacement": "least effective",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\buseless\\b",
+          "replacement": "not yet useful",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bpathetic\\b",
+          "replacement": "underwhelming",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bridiculous\\b",
+          "replacement": "surprising",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bincompetent\\b",
+          "replacement": "still learning",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bbrain dead\\b",
+          "replacement": "unclear",
+          "flags": "i"
+        }
+      ]
+    }
+  }
+}

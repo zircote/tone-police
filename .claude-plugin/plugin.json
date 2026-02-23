@@ -1,0 +1,5 @@
+{
+  "name": "tone-police",
+  "description": "Automatically filters angry, hostile, and profane language from user prompts before they reach Claude. Preserves intent while replacing hostility with constructive phrasing.",
+  "version": "1.0.0"
+}

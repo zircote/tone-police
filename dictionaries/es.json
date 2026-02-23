@@ -1,0 +1,104 @@
+{
+  "language": "es",
+  "patterns": {
+    "light": {
+      "profanity": [
+        { "pattern": "\\bmierda\\b", "replacement": "rayos", "flags": "i" },
+        { "pattern": "\\bjoder\\b", "replacement": "caramba", "flags": "i" },
+        { "pattern": "\\bputa\\b", "replacement": "rayos", "flags": "i" },
+        { "pattern": "\\bcoño\\b", "replacement": "caramba", "flags": "i" },
+        { "pattern": "\\bcabrón\\b", "replacement": "tipo", "flags": "i" },
+        { "pattern": "\\bculo\\b", "replacement": "trasero", "flags": "i" }
+      ]
+    },
+    "moderate": {
+      "profanity": [
+        { "pattern": "\\bmierda\\b", "replacement": "rayos", "flags": "i" },
+        { "pattern": "\\bjoder\\b", "replacement": "caramba", "flags": "i" },
+        { "pattern": "\\bputa\\b", "replacement": "rayos", "flags": "i" },
+        { "pattern": "\\bcoño\\b", "replacement": "caramba", "flags": "i" },
+        { "pattern": "\\bcabrón\\b", "replacement": "tipo", "flags": "i" },
+        { "pattern": "\\bculo\\b", "replacement": "trasero", "flags": "i" }
+      ],
+      "hostile_phrases": [
+        {
+          "pattern": "\\bvete al diablo\\b",
+          "replacement": "por favor vete",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bcállate\\b",
+          "replacement": "silencio por favor",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bestúpido\\b",
+          "replacement": "desinformado",
+          "flags": "i"
+        },
+        { "pattern": "\\bimbécil\\b", "replacement": "amigo", "flags": "i" },
+        {
+          "pattern": "\\bqué demonios\\b",
+          "replacement": "qué pasó",
+          "flags": "i"
+        }
+      ]
+    },
+    "strict": {
+      "profanity": [
+        { "pattern": "\\bmierda\\b", "replacement": "rayos", "flags": "i" },
+        { "pattern": "\\bjoder\\b", "replacement": "caramba", "flags": "i" },
+        { "pattern": "\\bputa\\b", "replacement": "rayos", "flags": "i" },
+        { "pattern": "\\bcoño\\b", "replacement": "caramba", "flags": "i" },
+        { "pattern": "\\bcabrón\\b", "replacement": "tipo", "flags": "i" },
+        { "pattern": "\\bculo\\b", "replacement": "trasero", "flags": "i" }
+      ],
+      "hostile_phrases": [
+        {
+          "pattern": "\\bvete al diablo\\b",
+          "replacement": "por favor vete",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bcállate\\b",
+          "replacement": "silencio por favor",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bestúpido\\b",
+          "replacement": "desinformado",
+          "flags": "i"
+        },
+        { "pattern": "\\bimbécil\\b", "replacement": "amigo", "flags": "i" },
+        {
+          "pattern": "\\bqué demonios\\b",
+          "replacement": "qué pasó",
+          "flags": "i"
+        }
+      ],
+      "negativity": [
+        {
+          "pattern": "\\bbasura\\b",
+          "replacement": "necesita mejora",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bhorrible\\b",
+          "replacement": "subóptimo",
+          "flags": "i"
+        },
+        { "pattern": "\\bodio\\b", "replacement": "no me gusta", "flags": "i" },
+        {
+          "pattern": "\\binútil\\b",
+          "replacement": "aún no útil",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bridículo\\b",
+          "replacement": "sorprendente",
+          "flags": "i"
+        }
+      ]
+    }
+  }
+}

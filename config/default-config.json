@@ -1,0 +1,7 @@
+{
+  "intensity": "moderate",
+  "languages": ["en"],
+  "enabled": true,
+  "preserve_code_blocks": true,
+  "log_transforms": false
+}

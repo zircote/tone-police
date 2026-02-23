@@ -1,0 +1,113 @@
+{
+  "language": "de",
+  "patterns": {
+    "light": {
+      "profanity": [
+        { "pattern": "\\bScheiße\\b", "replacement": "Mist", "flags": "i" },
+        { "pattern": "\\bArsch\\b", "replacement": "Hintern", "flags": "i" },
+        {
+          "pattern": "\\bverdammt\\b",
+          "replacement": "verflixt",
+          "flags": "i"
+        },
+        { "pattern": "\\bFick\\b", "replacement": "Mist", "flags": "i" },
+        { "pattern": "\\bWichser\\b", "replacement": "Trottel", "flags": "i" },
+        {
+          "pattern": "\\bHurensohn\\b",
+          "replacement": "Frechdachs",
+          "flags": "i"
+        }
+      ]
+    },
+    "moderate": {
+      "profanity": [
+        { "pattern": "\\bScheiße\\b", "replacement": "Mist", "flags": "i" },
+        { "pattern": "\\bArsch\\b", "replacement": "Hintern", "flags": "i" },
+        {
+          "pattern": "\\bverdammt\\b",
+          "replacement": "verflixt",
+          "flags": "i"
+        },
+        { "pattern": "\\bFick\\b", "replacement": "Mist", "flags": "i" },
+        { "pattern": "\\bWichser\\b", "replacement": "Trottel", "flags": "i" },
+        {
+          "pattern": "\\bHurensohn\\b",
+          "replacement": "Frechdachs",
+          "flags": "i"
+        }
+      ],
+      "hostile_phrases": [
+        {
+          "pattern": "\\bhalt die Fresse\\b",
+          "replacement": "bitte sei still",
+          "flags": "i"
+        },
+        { "pattern": "\\bdu Idiot\\b", "replacement": "Freund", "flags": "i" },
+        {
+          "pattern": "\\bverpiss dich\\b",
+          "replacement": "geh bitte",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bwas zur Hölle\\b",
+          "replacement": "was ist passiert",
+          "flags": "i"
+        }
+      ]
+    },
+    "strict": {
+      "profanity": [
+        { "pattern": "\\bScheiße\\b", "replacement": "Mist", "flags": "i" },
+        { "pattern": "\\bArsch\\b", "replacement": "Hintern", "flags": "i" },
+        {
+          "pattern": "\\bverdammt\\b",
+          "replacement": "verflixt",
+          "flags": "i"
+        },
+        { "pattern": "\\bFick\\b", "replacement": "Mist", "flags": "i" },
+        { "pattern": "\\bWichser\\b", "replacement": "Trottel", "flags": "i" },
+        {
+          "pattern": "\\bHurensohn\\b",
+          "replacement": "Frechdachs",
+          "flags": "i"
+        }
+      ],
+      "hostile_phrases": [
+        {
+          "pattern": "\\bhalt die Fresse\\b",
+          "replacement": "bitte sei still",
+          "flags": "i"
+        },
+        { "pattern": "\\bdu Idiot\\b", "replacement": "Freund", "flags": "i" },
+        {
+          "pattern": "\\bverpiss dich\\b",
+          "replacement": "geh bitte",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bwas zur Hölle\\b",
+          "replacement": "was ist passiert",
+          "flags": "i"
+        }
+      ],
+      "negativity": [
+        {
+          "pattern": "\\bMüll\\b",
+          "replacement": "verbesserungswürdig",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bschrecklich\\b",
+          "replacement": "suboptimal",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bnutzlos\\b",
+          "replacement": "noch nicht nützlich",
+          "flags": "i"
+        },
+        { "pattern": "\\bhasse\\b", "replacement": "mag nicht", "flags": "i" }
+      ]
+    }
+  }
+}

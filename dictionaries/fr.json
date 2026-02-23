@@ -1,0 +1,93 @@
+{
+  "language": "fr",
+  "patterns": {
+    "light": {
+      "profanity": [
+        { "pattern": "\\bmerde\\b", "replacement": "zut", "flags": "i" },
+        { "pattern": "\\bputain\\b", "replacement": "flûte", "flags": "i" },
+        { "pattern": "\\bbordel\\b", "replacement": "oh là là", "flags": "i" },
+        { "pattern": "\\bcon\\b", "replacement": "maladroit", "flags": "i" },
+        { "pattern": "\\bfoutre\\b", "replacement": "faire", "flags": "i" },
+        { "pattern": "\\benculé\\b", "replacement": "malotru", "flags": "i" }
+      ]
+    },
+    "moderate": {
+      "profanity": [
+        { "pattern": "\\bmerde\\b", "replacement": "zut", "flags": "i" },
+        { "pattern": "\\bputain\\b", "replacement": "flûte", "flags": "i" },
+        { "pattern": "\\bbordel\\b", "replacement": "oh là là", "flags": "i" },
+        { "pattern": "\\bcon\\b", "replacement": "maladroit", "flags": "i" },
+        { "pattern": "\\bfoutre\\b", "replacement": "faire", "flags": "i" },
+        { "pattern": "\\benculé\\b", "replacement": "malotru", "flags": "i" }
+      ],
+      "hostile_phrases": [
+        {
+          "pattern": "\\bta gueule\\b",
+          "replacement": "tais-toi s'il te plaît",
+          "flags": "i"
+        },
+        { "pattern": "\\bespèce de\\b", "replacement": "cher", "flags": "i" },
+        {
+          "pattern": "\\bva te faire\\b",
+          "replacement": "va-t'en",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bquel con\\b",
+          "replacement": "quelle surprise",
+          "flags": "i"
+        }
+      ]
+    },
+    "strict": {
+      "profanity": [
+        { "pattern": "\\bmerde\\b", "replacement": "zut", "flags": "i" },
+        { "pattern": "\\bputain\\b", "replacement": "flûte", "flags": "i" },
+        { "pattern": "\\bbordel\\b", "replacement": "oh là là", "flags": "i" },
+        { "pattern": "\\bcon\\b", "replacement": "maladroit", "flags": "i" },
+        { "pattern": "\\bfoutre\\b", "replacement": "faire", "flags": "i" },
+        { "pattern": "\\benculé\\b", "replacement": "malotru", "flags": "i" }
+      ],
+      "hostile_phrases": [
+        {
+          "pattern": "\\bta gueule\\b",
+          "replacement": "tais-toi s'il te plaît",
+          "flags": "i"
+        },
+        { "pattern": "\\bespèce de\\b", "replacement": "cher", "flags": "i" },
+        {
+          "pattern": "\\bva te faire\\b",
+          "replacement": "va-t'en",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bquel con\\b",
+          "replacement": "quelle surprise",
+          "flags": "i"
+        }
+      ],
+      "negativity": [
+        {
+          "pattern": "\\bc'est nul\\b",
+          "replacement": "ça peut s'améliorer",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bdégueulasse\\b",
+          "replacement": "décevant",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bhorrible\\b",
+          "replacement": "sous-optimal",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bdéteste\\b",
+          "replacement": "n'apprécie pas",
+          "flags": "i"
+        }
+      ]
+    }
+  }
+}

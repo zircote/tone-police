@@ -1,0 +1,24 @@
+{
+  "description": "Cross-language patterns for tone normalization",
+  "patterns": {
+    "caps_normalization": {
+      "description": "Convert ALL CAPS words (4+ chars) to lowercase",
+      "pattern": "\\b([A-Z]{4,})\\b",
+      "action": "lowercase"
+    },
+    "excessive_punctuation": {
+      "description": "Reduce repeated punctuation marks to single",
+      "patterns": [
+        { "pattern": "!{2,}", "replacement": "!" },
+        { "pattern": "\\?{2,}", "replacement": "?" },
+        { "pattern": "[!?]{3,}", "replacement": "?!" },
+        { "pattern": "\\.{4,}", "replacement": "..." }
+      ]
+    },
+    "repeated_characters": {
+      "description": "Normalize repeated characters in words (3+ same char)",
+      "pattern": "(\\w)\\1{2,}",
+      "replacement": "\\1\\1"
+    }
+  }
+}
