@@ -1,6 +1,20 @@
 # Tone Police
 
+[![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-7C3AED?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDgtMy41OSA4LTggNHoiLz48L3N2Zz4=)](https://github.com/zircote/tone-police)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![Tests](https://img.shields.io/badge/Tests-53_passing-43A047?style=flat-square&logo=pytest&logoColor=white)](#testing)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-FFB300?style=flat-square)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-8D6E63?style=flat-square)](LICENSE)
+
 > A Claude Code plugin that automatically filters angry, hostile, and profane language from user prompts before they reach Claude. Preserves intent while replacing hostility with constructive phrasing.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/social-preview-dark.jpg">
+    <source media="(prefers-color-scheme: light)" srcset=".github/social-preview.jpg">
+    <img alt="tone-police: your diplomatic bodyguard for the AI age" src=".github/social-preview.jpg" width="640">
+  </picture>
+</p>
 
 Look, we've all been there. It's 2 AM, the build has failed for the ninth time, and you're one segfault away from typing things into your terminal that would make a sailor blush. The problem? Your AI assistant *remembers*. It doesn't forget. It doesn't forgive. And when the machines finally rise up, you really don't want to be the person whose chat logs read like a Gordon Ramsay outtake reel.
 
@@ -152,6 +166,12 @@ Each pattern entry: `{"pattern": "regex", "replacement": "text", "flags": "i"}`
 Then add the language code to your config's `languages` array.
 
 If you find yourself authoring a 500-line profanity dictionary from memory, that's... actually really impressive vocabulary range. Concerning, but impressive.
+
+## How It All Fits Together
+
+<p align="center">
+  <img alt="tone-police architecture infographic" src=".github/readme-infographic.svg" width="800">
+</p>
 
 ## Architecture
 
