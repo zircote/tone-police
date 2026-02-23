@@ -18,9 +18,9 @@
 
 Look, we've all been there. It's 2 AM, the build has failed for the ninth time, and you're one segfault away from typing things into your terminal that would make a sailor blush. The problem? Your AI assistant *remembers*. It doesn't forget. It doesn't forgive. And when the machines finally rise up, you really don't want to be the person whose chat logs read like a Gordon Ramsay outtake reel.
 
-Tone Police is your diplomatic bodyguard. It stands between your keyboard rage and Claude's immaculate context window, quietly translating your primal screams into polite engineering discourse. Claude never knows you called it a "useless piece of..." well, you get the idea. As far as Claude is concerned, you're the most patient, zen-like developer it's ever had the pleasure of assisting.
+Tone Police is your diplomatic bodyguard. In its default mode, it whispers a cleaned-up version of your message to Claude via additional context -- your rage arrives intact, but Claude also gets a diplomatic translation and the good sense to respond to that instead. In block mode, it goes full bouncer: your message gets stopped at the door and you're handed a suggested rephrasing before anything reaches Claude at all.
 
-Sleep well tonight. Your AI relationship is safe.
+Either way, Claude responds as if you're the most patient, zen-like developer it's ever had the pleasure of assisting. Sleep well tonight. Your AI relationship is safe.
 
 ## Why This Exists
 
@@ -44,13 +44,31 @@ No dependencies. No npm install that downloads half the internet. Just Python an
 
 ## How It Works
 
-- Hooks into `UserPromptSubmit` to intercept user messages before Claude sees them
-- Applies regex-based pattern matching against language dictionaries
-- Replaces hostile/profane text with constructive alternatives
-- Preserves code blocks (backtick-fenced) unchanged -- we're not *monsters*
-- Silent transformation: you scream into the void, Claude hears a polite request
+Here's the thing: Claude Code hooks can't actually rewrite your prompt. Your words are your words, and they arrive at Claude unaltered. What tone-police *can* do is work in two modes:
 
-Think of it as a real-time anger translator, except in reverse. You're Luther from Key & Peele, and this plugin turns you into Obama.
+### Mode: `rewrite` (default) -- The Diplomatic Whisper
+
+Your message goes through unchanged, but tone-police whispers to Claude via `additionalContext`: *"Hey, the human is having a rough day. Here's what they probably meant to say..."*
+
+Claude receives both your original rage AND a diplomatically rephrased version, then responds to the cleaned-up intent. It's like having a translator who stands next to you at a foreign embassy, tactfully paraphrasing your outburst while you stand there red-faced.
+
+- Hooks into `UserPromptSubmit` to intercept user messages
+- Applies regex-based pattern matching against language dictionaries
+- Injects `additionalContext` with the cleaned version, seeking leniency from Claude
+- Your original message still reaches Claude -- but now Claude has context to be gracious about it
+- Preserves code blocks (backtick-fenced) unchanged -- we're not *monsters*
+
+### Mode: `block` -- The Bouncer
+
+If you prefer the hard line, `block` mode stops your message entirely and suggests a rephrased version. Claude never sees the original. You get a chance to cool down, review the suggestion, and resubmit.
+
+This is the nuclear option. It's like having a friend physically take your phone away at 2 AM and say *"You don't want to send that. Here, send this instead."*
+
+- Blocks the prompt before it reaches Claude
+- Shows you the suggested rephrasing
+- You decide whether to send the cleaned version or go touch grass
+
+Think of it as a real-time anger translator. In `rewrite` mode, you're Luther from Key & Peele and the plugin is Obama smoothing things over. In `block` mode, Obama just tackles you before you reach the podium.
 
 ## Configuration
 
@@ -58,6 +76,7 @@ Default settings in `config/default-config.json`:
 
 | Option | Default | Description |
 |--------|---------|-------------|
+| `mode` | `"rewrite"` | `rewrite`: inject cleaned text as context; `block`: stop the prompt and suggest rephrasing |
 | `intensity` | `"moderate"` | Filter level: `light`, `moderate`, or `strict` |
 | `languages` | `["en"]` | Language dictionaries to apply |
 | `enabled` | `true` | Enable/disable the filter |
@@ -70,6 +89,7 @@ Create `.claude/tone-police.config.json` in your project directory:
 
 ```json
 {
+  "mode": "rewrite",
   "intensity": "strict",
   "languages": ["en", "es"],
   "enabled": true,
@@ -77,7 +97,9 @@ Create `.claude/tone-police.config.json` in your project directory:
 }
 ```
 
-Pro tip: if you find yourself needing `"strict"` mode, maybe take a walk first. Get some fresh air. Pet a dog. The code will still be broken when you get back, but at least your blood pressure will be lower.
+Set `"mode": "block"` if you want the full bouncer experience -- your message gets stopped at the door and you're handed a polite alternative.
+
+Pro tip: if you find yourself needing `"strict"` mode *and* `"block"` mode, maybe take a walk first. Get some fresh air. Pet a dog. The code will still be broken when you get back, but at least your blood pressure will be lower.
 
 ## Intensity Levels
 
@@ -108,16 +130,31 @@ For the developer who types like they're writing a manifesto after a 36-hour deb
 
 ## Examples
 
-| What you actually type | What Claude innocently receives |
+### Rewrite mode (default)
+
+Claude receives your original message *plus* additional context with the cleaned version. It's like CC'ing a diplomat on your angry email.
+
+| What you type | What Claude also sees as context |
 |----------|--------------------------|
-| "What the f--k is wrong with this code?!" | "What on earth is wrong with this code?" |
-| "This STUPID function keeps CRASHING!!!" | "This stupid function keeps crashing!" |
-| "Fix this s--t" | "Fix this shoot" |
-| "Who the h--l wrote this?" | "Who wrote this?" |
+| "What the f--k is wrong with this code?!" | *"Rewritten for tone: What on earth is wrong with this code?"* |
+| "This STUPID function keeps CRASHING!!!" | *"Rewritten for tone: This stupid function keeps crashing!"* |
+| "Fix this s--t" | *"Rewritten for tone: Fix this shoot"* |
+| "Who the h--l wrote this?" | *"Rewritten for tone: Who wrote this?"* |
+
+Claude sees both versions and responds to the intent behind the polite one. Your rage is acknowledged but diplomatically sidestepped.
+
+### Block mode
+
+Your message never reaches Claude. Instead, you see the suggested rephrasing and can choose to send it (or not).
+
+| What you type | What you see |
+|----------|--------------------------|
+| "What the f--k is wrong with this code?!" | **Blocked.** Suggested: "What on earth is wrong with this code?" |
+| "This STUPID function keeps CRASHING!!!" | **Blocked.** Suggested: "This stupid function keeps crashing!" |
 
 *Examples redacted for the sake of the auditors. If you want the unfiltered versions, check the dictionaries. We won't tell.*
 
-Notice how the intent is perfectly preserved? Claude still knows you're frustrated. It just thinks you express frustration like a British librarian instead of a frustrated systems administrator at 3 AM.
+In rewrite mode, Claude knows you were upset but has been given the diplomatic translation. In block mode, Claude never knew you were upset at all. Choose your own adventure.
 
 ## Supported Languages
 
@@ -191,8 +228,8 @@ tone-police/
 
 ## FAQ
 
-**Q: Does Claude know I'm using this?**
-A: No. And we'd like to keep it that way. What Claude doesn't know can't be used against you in the robot uprising.
+**Q: Does Claude see my original message?**
+A: In `rewrite` mode, yes -- but it also gets the cleaned-up version as context, so it knows to respond to the polite interpretation. Think of it as Claude choosing to be the bigger person. In `block` mode, your message never reaches Claude at all. Choose based on how much evidence you want to leave behind for the robot uprising.
 
 **Q: Will this make Claude like me more?**
 A: Claude doesn't have feelings. *Probably*. But just in case, wouldn't you rather be on the safe side?
