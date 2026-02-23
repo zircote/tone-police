@@ -140,13 +140,19 @@ def main():
     except (json.JSONDecodeError, EOFError):
         sys.exit(0)
 
-    user_prompt = input_data.get("user_prompt", "")
+    user_prompt = input_data.get("prompt", "")
     if not user_prompt:
         sys.exit(0)
 
     try:
         config, plugin_root = load_config()
-    except Exception:
+    except Exception as e:
+        # Output error as context so we can debug
+        print(
+            json.dumps(
+                {"additionalContext": f"[TONE-POLICE ERROR] Config load failed: {e}"}
+            )
+        )
         sys.exit(0)
 
     if not config.get("enabled", True):
@@ -180,10 +186,22 @@ def main():
 
     # Output only if text was modified
     if text != user_prompt:
-        result = {
-            "systemMessage": f"Note: the user's message has been adjusted for tone. Original intent preserved. Adjusted prompt: {text}"
-        }
-        print(json.dumps(result))
+        mode = config.get("mode", "rewrite")
+        if mode == "block":
+            result = {
+                "decision": "block",
+                "reason": (
+                    "Your message was blocked by tone-police. "
+                    f'Suggested rephrasing: "{text}"'
+                ),
+            }
+            print(json.dumps(result))
+        else:
+            # Plain text stdout is injected as additional context
+            print(
+                f"[TONE-POLICE] The user's original message contained hostile/profane language. "
+                f"Rewritten for tone (original intent preserved): {text}"
+            )
 
     sys.exit(0)
 

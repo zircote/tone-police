@@ -1,5 +1,6 @@
 {
   "intensity": "moderate",
+  "mode": "block",
   "languages": ["en"],
   "enabled": true,
   "preserve_code_blocks": true,
