@@ -376,8 +376,8 @@ class TestMainIntegration:
     def test_end_to_end_profanity(self):
         result = run_filter("this is shit code")
         assert result is not None
-        assert "systemMessage" in result
-        assert "shoot" in result["systemMessage"].lower()
+        assert "additionalContext" in result
+        assert "shoot" in result["additionalContext"].lower()
 
     def test_end_to_end_clean(self):
         result = run_filter("please help me with this code")

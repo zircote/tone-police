@@ -71,7 +71,7 @@ def run_filter(user_prompt, config_override=None, env_extra=None):
         Parsed JSON dict if the filter produced output, else None.
     """
     script = str(PLUGIN_ROOT / "hooks" / "scripts" / "tone-filter.py")
-    input_data = json.dumps({"user_prompt": user_prompt})
+    input_data = json.dumps({"prompt": user_prompt})
 
     env = os.environ.copy()
     env["CLAUDE_PLUGIN_ROOT"] = str(PLUGIN_ROOT)
@@ -86,6 +86,11 @@ def run_filter(user_prompt, config_override=None, env_extra=None):
         env=env,
     )
 
-    if result.stdout.strip():
-        return json.loads(result.stdout.strip())
-    return None
+    stdout = result.stdout.strip()
+    if not stdout:
+        return None
+    try:
+        return json.loads(stdout)
+    except json.JSONDecodeError:
+        # Rewrite mode outputs plain text (becomes additionalContext in Claude Code)
+        return {"additionalContext": stdout}
