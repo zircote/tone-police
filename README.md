@@ -68,7 +68,7 @@ This is the nuclear option. It's like having a friend physically take your phone
 - Shows you the suggested rephrasing
 - You decide whether to send the cleaned version or go touch grass
 
-Think of it as a real-time anger translator. In `rewrite` mode, you're Luther from Key & Peele and the plugin is Obama smoothing things over. In `block` mode, Obama just tackles you before you reach the podium.
+Think of it as a real-time anger translator. In `rewrite` mode, your outburst gets a diplomatic chaperone. In `block` mode, the bouncer just tackles you before you reach the microphone.
 
 ## Configuration
 
