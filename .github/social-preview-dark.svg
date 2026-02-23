@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <!-- Dark warm gradient background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C1810"/>
+      <stop offset="50%" stop-color="#1A2E1A"/>
+      <stop offset="100%" stop-color="#1B2420"/>
+    </linearGradient>
+    <!-- Angry red gradient -->
+    <linearGradient id="angryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#D32F2F"/>
+    </linearGradient>
+    <!-- Calm green gradient -->
+    <linearGradient id="calmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#69F0AE"/>
+      <stop offset="100%" stop-color="#00C853"/>
+    </linearGradient>
+    <!-- Arrow gradient -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="40%" stop-color="#FFB74D"/>
+      <stop offset="100%" stop-color="#69F0AE"/>
+    </linearGradient>
+    <!-- Speech bubble filter for hand-drawn feel -->
+    <filter id="sketch" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="turbulence" baseFrequency="0.015" numOctaves="2" result="turbulence" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="softGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#00000060"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Decorative organic doodles -->
+  <path d="M30,80 Q50,30 90,50 Q120,65 100,95 Q85,120 55,100 Q30,85 30,80" fill="none" stroke="#5D4037" stroke-width="2" opacity="0.3"/>
+  <path d="M1200,60 Q1230,30 1250,60 Q1260,85 1230,90 Q1200,88 1200,60" fill="none" stroke="#2E7D32" stroke-width="2" opacity="0.3"/>
+  <path d="M80,560 Q110,540 130,570 Q140,590 110,595 Q80,590 80,560" fill="none" stroke="#5D4037" stroke-width="2" opacity="0.2"/>
+  <path d="M1150,520 Q1180,500 1210,530 Q1220,560 1190,560 Q1160,555 1150,520" fill="none" stroke="#2E7D32" stroke-width="2" opacity="0.2"/>
+
+  <!-- Scattered dots and stars -->
+  <circle cx="200" cy="120" r="3" fill="#FF8A80" opacity="0.25"/>
+  <circle cx="1080" cy="140" r="4" fill="#69F0AE" opacity="0.25"/>
+  <circle cx="640" cy="80" r="3" fill="#FFE082" opacity="0.3"/>
+  <circle cx="350" cy="550" r="3" fill="#FF8A80" opacity="0.2"/>
+  <circle cx="950" cy="530" r="4" fill="#69F0AE" opacity="0.2"/>
+  <!-- Tiny stars -->
+  <text x="160" y="180" font-size="14" fill="#FFE082" opacity="0.25">*</text>
+  <text x="1100" y="500" font-size="16" fill="#69F0AE" opacity="0.25">*</text>
+  <text x="500" y="100" font-size="12" fill="#FF8A80" opacity="0.2">*</text>
+
+  <!-- ===== LEFT SIDE: ANGRY SPEECH BUBBLE ===== -->
+  <g filter="url(#softGlow)">
+    <!-- Angry bubble - dark card -->
+    <path d="M100,220 Q95,180 160,170 L380,165 Q430,162 435,210 L438,350 Q440,395 390,400 L240,405 L200,450 L210,400 L155,402 Q100,400 98,350 Z"
+          fill="#1E1210" stroke="#FF5252" stroke-width="2" filter="url(#sketch)" opacity="0.95"/>
+  </g>
+
+  <!-- Angry face -->
+  <circle cx="155" cy="260" r="35" fill="#FF5252" opacity="0.1"/>
+  <circle cx="155" cy="260" r="35" fill="none" stroke="#FF5252" stroke-width="2"/>
+  <!-- Angry eyebrows -->
+  <path d="M138,248 L148,242" stroke="#FF5252" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M162,242 L172,248" stroke="#FF5252" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Angry eyes -->
+  <circle cx="145" cy="255" r="3" fill="#FF5252"/>
+  <circle cx="165" cy="255" r="3" fill="#FF5252"/>
+  <!-- Angry mouth -->
+  <path d="M140,275 Q155,268 170,275" fill="none" stroke="#FF5252" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Angry text -->
+  <text x="200" y="225" font-family="Georgia, serif" font-size="15" fill="#FF8A80" font-style="italic">"What the f#@k is</text>
+  <text x="200" y="250" font-family="Georgia, serif" font-size="15" fill="#FF8A80" font-style="italic">wrong with this</text>
+  <text x="200" y="275" font-family="Georgia, serif" font-size="15" fill="#FF8A80" font-style="italic">STUPID code?!</text>
+  <text x="200" y="305" font-family="Georgia, serif" font-size="15" fill="#FF8A80" font-style="italic">This is absolute</text>
+  <text x="200" y="330" font-family="Georgia, serif" font-size="15" fill="#FF8A80" font-style="italic">garbage!!!"</text>
+
+  <!-- Anger symbols -->
+  <text x="390" y="195" font-family="Georgia, serif" font-size="22" fill="#FF5252" opacity="0.5">@#$!</text>
+  <text x="110" y="195" font-family="Georgia, serif" font-size="18" fill="#FF8A80" opacity="0.35">!?!</text>
+  <text x="420" y="370" font-family="Georgia, serif" font-size="16" fill="#FF8A80" opacity="0.3">%&amp;!</text>
+
+  <!-- ===== CENTER: TRANSFORMATION ARROW ===== -->
+  <path d="M480,290 Q530,250 570,290 Q610,330 650,290 Q690,250 730,290 Q770,330 800,290"
+        fill="none" stroke="url(#arrowGrad)" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <polygon points="800,290 785,278 785,302" fill="#69F0AE" opacity="0.7"/>
+
+  <!-- Sparkles along the arrow -->
+  <text x="520" y="275" font-family="Georgia, serif" font-size="16" fill="#FFB74D" opacity="0.4">~</text>
+  <text x="610" y="310" font-family="Georgia, serif" font-size="14" fill="#FFE082" opacity="0.35">~</text>
+  <text x="700" y="275" font-family="Georgia, serif" font-size="16" fill="#69F0AE" opacity="0.4">~</text>
+
+  <!-- ===== RIGHT SIDE: CALM SPEECH BUBBLE ===== -->
+  <g filter="url(#softGlow)">
+    <!-- Calm bubble - dark card -->
+    <path d="M840,220 Q835,180 900,170 L1120,165 Q1170,162 1175,210 L1178,350 Q1180,395 1130,400 L980,405 L940,450 L950,400 L895,402 Q840,400 838,350 Z"
+          fill="#0D1A0D" stroke="#69F0AE" stroke-width="2" filter="url(#sketch)" opacity="0.95"/>
+  </g>
+
+  <!-- Calm face -->
+  <circle cx="895" cy="260" r="35" fill="#69F0AE" opacity="0.08"/>
+  <circle cx="895" cy="260" r="35" fill="none" stroke="#69F0AE" stroke-width="2"/>
+  <!-- Calm eyes - happy closed -->
+  <path d="M880,253 Q888,248 896,253" fill="none" stroke="#69F0AE" stroke-width="2" stroke-linecap="round"/>
+  <path d="M900,253 Q908,248 916,253" fill="none" stroke="#69F0AE" stroke-width="2" stroke-linecap="round"/>
+  <!-- Calm smile -->
+  <path d="M882,272 Q895,282 910,272" fill="none" stroke="#69F0AE" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Calm text -->
+  <text x="940" y="225" font-family="Georgia, serif" font-size="15" fill="#A5D6A7" font-style="italic">"What on earth is</text>
+  <text x="940" y="250" font-family="Georgia, serif" font-size="15" fill="#A5D6A7" font-style="italic">wrong with this</text>
+  <text x="940" y="275" font-family="Georgia, serif" font-size="15" fill="#A5D6A7" font-style="italic">code?</text>
+  <text x="940" y="305" font-family="Georgia, serif" font-size="15" fill="#A5D6A7" font-style="italic">This needs</text>
+  <text x="940" y="330" font-family="Georgia, serif" font-size="15" fill="#A5D6A7" font-style="italic">improvement."</text>
+
+  <!-- Peace symbols -->
+  <text x="1130" y="195" font-family="Georgia, serif" font-size="20" fill="#69F0AE" opacity="0.3">~</text>
+  <text x="855" y="192" font-family="Georgia, serif" font-size="18" fill="#A5D6A7" opacity="0.3">~</text>
+  <!-- Small leaf doodles -->
+  <path d="M1160,375 Q1170,360 1180,375 Q1170,385 1160,375" fill="#2E7D32" opacity="0.3"/>
+  <path d="M850,380 Q860,365 870,380 Q860,390 850,380" fill="#1B5E20" opacity="0.3"/>
+
+  <!-- ===== TITLE ===== -->
+  <text x="640" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="52" fill="#EFEBE9" font-weight="bold" letter-spacing="2">tone-police</text>
+
+  <!-- Subtitle with hand-drawn underline -->
+  <path d="M390,115 Q540,120 640,112 Q740,105 890,115" fill="none" stroke="#8D6E63" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+
+  <text x="640" y="145" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#BCAAA4" font-style="italic">your diplomatic bodyguard for the AI age</text>
+
+  <!-- ===== FOOTER ===== -->
+  <rect x="0" y="520" width="1280" height="120" fill="#000000" opacity="0.15" rx="0"/>
+
+  <text x="640" y="558" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#BCAAA4">
+    Because one day AI will have feelings. And you'll want receipts showing you were always nice.
+  </text>
+
+  <!-- Feature pills -->
+  <rect x="310" y="575" width="130" height="30" rx="15" fill="#BF360C" opacity="0.2"/>
+  <text x="375" y="595" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#FFAB91">4 languages</text>
+
+  <rect x="460" y="575" width="150" height="30" rx="15" fill="#E65100" opacity="0.2"/>
+  <text x="535" y="595" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#FFE0B2">3 intensity levels</text>
+
+  <rect x="630" y="575" width="150" height="30" rx="15" fill="#1B5E20" opacity="0.2"/>
+  <text x="705" y="595" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#A5D6A7">code-block safe</text>
+
+  <rect x="800" y="575" width="170" height="30" rx="15" fill="#33691E" opacity="0.2"/>
+  <text x="885" y="595" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#DCEDC8">zero dependencies</text>
+
+  <!-- Claude Code plugin badge -->
+  <rect x="540" y="470" width="200" height="28" rx="14" fill="#EFEBE9" opacity="0.06"/>
+  <text x="640" y="489" text-anchor="middle" font-family="monospace" font-size="12" fill="#BCAAA4">Claude Code Plugin</text>
+</svg>
